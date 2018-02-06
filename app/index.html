@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ERC721</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <div>
+    <h1>Balance: <span id="balance"></span></h1><br>
+    <button onClick="mintToken()">Mint</button><input type="number" id="mintId"><br>
+    <button onClick="burnToken()">Burn</button><input type="number" id="burnId"><br>
+    <h2>Owned Tokens: </div><span id="tokens"></span></h2>
+  </div>
+
+  <div>
+    <h1>Create Auction: </h1><br>
+    <input type="number" id="id" placeholder="id"><br>
+    <input type="number" id="startPrice" placedholder="start price"><br>
+    <input type="number" id="endPrice" placedholder="end price"><br>
+    <input type="number" id="duration" placedholder="duration (days)"><br>
+    <button onClick="createAuction()">Create Auction</button><br>
+  </div>
+
+  <div>
+    <h1>Get Auction</h1><br>
+    <input type="number" id="getId"><button onClick="getAuction()">Get</button><br>
+    <table id="auction" border="1">
+      <thead>
+        <th>Seller</th>
+        <th>Start Price</th>
+        <th>Current Price</th>
+        <th>End Price</th>
+        <th>Duration</th>
+        <th>Started At</th>
+        <th>Bid</th>
+      </thead>
+      <tbody>
+        <td id="seller"></td>
+        <td id="startPriceT"></td>
+        <td id="currPriceT"></td>
+        <td id="endPriceT"></td>
+        <td id="durationT"></td>
+        <td id="start"></td>
+        <td><input type="number" id="bid" placeholder="Bid"><button onClick="bid()">Bid</button></td>
+      </tbody>
+    </table><br>
+    <button id="cancel" onClick="cancelAuction()" style="display:none">Cancel</button>
+  </div>
+</body>
+</html>
