@@ -152,7 +152,7 @@ window.bid = function() {
   var bid = document.getElementById("bid").value;
 
   ClockAuction.deployed().then((instance) => {
-    instance.bid(id,{from: account2,value: web3.toWei(bid,'ether'),gas: 1500000}).then(() => {
+    instance.bid(id,{from: account,value: web3.toWei(bid,'ether'),gas: 1500000}).then(() => {
 
     })
   })
